@@ -23,6 +23,58 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            symbol.SelectedIndex = 0;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            int a = Int32.Parse(text1.Text);
+            int b = Int32.Parse(text2.Text);
+            int selectedIndex = symbol.SelectedIndex;
+            switch (selectedIndex)
+            {
+                case 0:
+                    {
+                        result.Content = a + b;
+                        break;
+                    }
+                case 1:
+                    {
+                        result.Content = a - b;
+                        break;
+                    }
+                case 2:
+                    {
+                        result.Content = a * b;
+                        break;
+                    }
+                case 3:
+                    {
+                        if (b == 0)
+                        {
+                            result.Content = "Error";
+                        }
+                        else
+                        {
+                            result.Content = a / b;
+                        }
+                        break;
+                    }
+                case 4:
+                    {
+                        if (b == 0)
+                        {
+                            result.Content = "Error";
+                        }
+                        else
+                        {
+                            result.Content = a % b;
+                        }
+                        break;
+                    }
+            }
+
         }
     }
 }
+

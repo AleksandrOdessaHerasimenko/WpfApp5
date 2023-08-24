@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+       Title="MainWindow" Height="150" Width="560" >
     <Grid>
 
+        <Button Content="=" FontSize="25" Height="45"  Width="75" HorizontalAlignment="Left" Margin="350,0,0,0" Click="Button_Click"/>
+        <Label Name="result" Height="45"  Width="100" HorizontalAlignment="Left" Margin="450,0,0,0" FontSize="25" />
+        <TextBox Name="text1" TextWrapping="Wrap"  Width="100" Height="45" HorizontalAlignment="Left" Margin="25,0,0,0" FontSize="25"/>
+        <TextBox Name="text2" TextWrapping="Wrap"  Width="100" Height="45" HorizontalAlignment="Left" Margin="225,0,0,0" FontSize="25"/>
+
+        <ComboBox Name="symbol" Height="45"  Width="50" HorizontalAlignment="Left" Margin="150,0,0,0">
+            <TextBlock FontSize="24">+</TextBlock>
+            <TextBlock FontSize="24">-</TextBlock>
+            <TextBlock FontSize="24">*</TextBlock>
+            <TextBlock FontSize="24">/</TextBlock>
+            <TextBlock FontSize="24">%</TextBlock>
+        </ComboBox>
+
     </Grid>
+
 </Window>
